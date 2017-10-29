@@ -110,7 +110,7 @@ function drawMinTimeMarks(){
         ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
 
-        ctx.strokeStyle = '#466B76';
+        ctx.strokeStyle = getRandomColor();
         ctx.stroke();
 
     }
