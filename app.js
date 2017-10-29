@@ -52,7 +52,6 @@ function clockHand(timeValue, timeType){
 }
 
 
-var i = 0;
 
 
 var tick = function(){
@@ -61,16 +60,11 @@ var tick = function(){
     var time = new Date();
     console.log(time.getSeconds());
     drawCircle();
-    drawMinTimeMarks(); 
+    drawMinTimeMarks();
     drawHourTimeMarks();
     clockHand(time.getSeconds(), "secs");
     clockHand(time.getMinutes(), "mins");
     clockHand(time.getHours(), "hours");
-    i++;
-    if(i >= 120)
-        i = 0;
-
-
 
     window.requestAnimationFrame(tick);
 };
@@ -124,7 +118,8 @@ function drawMinTimeMarks(){
 
 function drawCircle(){
     ctx.beginPath();
-    ctx.arc(c.width / 2, c.height / 2, c.width / 2,0,2*Math.PI);
+    ctx.arc(c.width / 2, c.height / 2, 5,0,2*Math.PI);
+    //ctx.arc(c.width / 2, c.height / 2, c.width / 2,0,2*Math.PI);
     ctx.stroke();
 }
 
