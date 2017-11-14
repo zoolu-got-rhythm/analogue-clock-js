@@ -102,6 +102,7 @@ function drawMinTimeMarks(){
         ctx.lineWidth = 1;            // HAND WIDTH.
         ctx.beginPath();
 
+        // essential the use of trigonometry < maciej
         var x1 = (c.width / 2) + Math.cos(angle) * (mark);
         var y1 = (c.height / 2) + Math.sin(angle) * (mark);
         var x2 = (c.width / 2) + Math.cos(angle) * (mark - (mark / 15));
